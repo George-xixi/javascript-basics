@@ -2,13 +2,13 @@ const add = (a, b) => {
   return a + b;
 };
 
-function subtract (a, b) {
-  // your code here
-}
+const subtract = (a, b) => {
+  return a - b;
+};
 
-function multiply (a, b) {
-  // your code here
-}
+const multiply = (a, b) => {
+  return a * b;
+};
 
 function divide (a, b) {
   // your code here
