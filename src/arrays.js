@@ -47,7 +47,10 @@ const reverseWordsInArray = strings => {
   return strings.map(reverseWord);
 };
 const onlyEven = numbers => {
-  // your code here
+  function isEven(a) {
+    return a % 2 === 0;
+  }
+  return numbers.filter(isEven);
 };
 
 const removeNthElement2 = (index, array) => {
