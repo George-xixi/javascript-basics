@@ -1,39 +1,51 @@
 const getNthElement = (index, array) => {
-  // your code here
+  return array[index % array.length];
 };
 
 const arrayToCSVString = array => {
-  // your code here
+  return array.toString();
 };
 
 const csvStringToArray = string => {
-  // your code here
+  return string.split(',');
 };
 
 const addToArray = (element, array) => {
-  // your code here
+  array.push(element);
 };
 
 const addToArray2 = (element, array) => {
-  // your code here
+  const newArray = [...array, element];
+  return newArray;
 };
 
 const removeNthElement = (index, array) => {
-  // your code here
+  return array.splice(index, 1);
 };
 
 const numbersToStrings = numbers => {
-  // your code here
+  const numToString = n => {
+    return n.toString();
+  };
+  return numbers.map(numToString);
 };
 
 const uppercaseWordsInArray = strings => {
-  // your code here
+  const uppercase = string => {
+    return string.toUpperCase();
+  };
+  return strings.map(uppercase);
 };
 
 const reverseWordsInArray = strings => {
-  // your code here
+  const reverseWord = string => {
+    return string
+      .split('')
+      .reverse()
+      .join('');
+  };
+  return strings.map(reverseWord);
 };
-
 const onlyEven = numbers => {
   // your code here
 };
