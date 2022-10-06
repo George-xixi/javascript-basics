@@ -46,6 +46,7 @@ const reverseWordsInArray = strings => {
   };
   return strings.map(reverseWord);
 };
+
 const onlyEven = numbers => {
   function isEven(a) {
     return a % 2 === 0;
@@ -54,23 +55,41 @@ const onlyEven = numbers => {
 };
 
 const removeNthElement2 = (index, array) => {
-  // your code here
+  const newArray = [...array];
+  newArray.splice(index, 1);
+  return newArray;
 };
 
 const elementsStartingWithAVowel = strings => {
-  // your code here
+  function startsVowel(string) {
+    const regex = /['a', 'e', 'i', 'o', 'u']/i;
+    return string.substring(0, 1).match(regex);
+  }
+  return strings.filter(startsVowel);
 };
 
 const removeSpaces = string => {
-  // your code here
+  return string.replaceAll(' ', '');
 };
 
 const sumNumbers = numbers => {
-  // your code here
+  function addition(prev, current) {
+    return prev + current;
+  }
+  return numbers.reduce(addition, 0);
 };
 
 const sortByLastLetter = strings => {
-  // your code here
+  const reverseWord = string => {
+    return string
+      .split('')
+      .reverse()
+      .join('');
+  };
+  return strings
+    .map(reverseWord)
+    .sort()
+    .map(reverseWord);
 };
 
 module.exports = {
